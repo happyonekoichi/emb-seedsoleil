@@ -349,6 +349,86 @@
   .item-row .item-text { font-size: 15px; color: #333; line-height: 1.7; }
   .item-row .item-text strong { color: var(--orange-dark); }
 
+  /* ============ PRICING ============ */
+  .price-subtitle {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    color: #1a1a1a;
+    margin-bottom: 14px;
+  }
+  .price-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 20px;
+  }
+  .price-row-label {
+    font-weight: 700;
+    font-size: 15px;
+    color: #333;
+  }
+  .price-row-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    line-height: 1.5;
+  }
+  .price-row-amount {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: var(--orange-dark);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .pricing-highlight {
+    background: var(--yellow);
+    border-radius: 16px;
+    padding: 20px 22px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+    color: #7a4400;
+    margin-bottom: 28px;
+    line-height: 1.8;
+  }
+  .pricing-highlight-sub {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 4px;
+  }
+  .reg-qr-box {
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: 18px;
+    padding: 20px 24px;
+    text-align: center;
+  }
+  .reg-qr-label {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--orange-dark);
+    margin-bottom: 14px;
+  }
+  .reg-qr-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    border: 2px solid #E8E8E8;
+  }
+
   /* ============ CONTACT ============ */
   .contact-section {
     background: linear-gradient(150deg, #FF6B1A 0%, #FFAE42 60%, #FFD560 100%);
@@ -431,6 +511,8 @@
     .gallery-grid { grid-template-columns: 1fr; }
     .gallery-grid .wide { grid-column: span 1; }
     .contact-card { padding: 32px 20px; }
+    .price-row { flex-wrap: wrap; }
+    .price-row-amount { font-size: 20px; }
   }
 </style>
 </head>
@@ -616,6 +698,77 @@
         <span class="item-icon">📚</span>
         <div class="item-text"><strong>内容②</strong> 希望があればやさしい基礎レッスンも行います。お気軽にどうぞ！</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="section section--cream">
+  <div class="inner">
+    <div class="sec-label">PRICING</div>
+    <h2 class="sec-title">料金体系 💰</h2>
+
+    <h3 class="price-subtitle">① 都度払い参加費（当日払い）</h3>
+    <div class="price-list">
+      <div class="price-row">
+        <div>
+          <div class="price-row-label">大人（一般）</div>
+          <div class="price-row-sub">当日都度</div>
+        </div>
+        <div class="price-row-amount">700円</div>
+      </div>
+      <div class="price-row">
+        <div>
+          <div class="price-row-label">高校生以下</div>
+          <div class="price-row-sub">当日都度</div>
+        </div>
+        <div class="price-row-amount">500円</div>
+      </div>
+      <div class="price-row">
+        <div>
+          <div class="price-row-label">親子（何名でも）</div>
+          <div class="price-row-sub">当日都度</div>
+        </div>
+        <div class="price-row-amount">1,000円</div>
+      </div>
+    </div>
+
+    <h3 class="price-subtitle">② 年間パスポート（シードソレイユ年会費・保険料も含む）</h3>
+    <div class="price-list">
+      <div class="price-row">
+        <div>
+          <div class="price-row-label">一般パスポート</div>
+          <div class="price-row-sub">大人1名：12か月<br>参加費6,000円＋SS年会費5,000円＋保険料1,000円</div>
+        </div>
+        <div class="price-row-amount">12,000円</div>
+      </div>
+      <div class="price-row">
+        <div>
+          <div class="price-row-label">子どもパスポート</div>
+          <div class="price-row-sub">高校生以下：12か月<br>参加費2,000円＋SS年会費5,000円＋保険料1,000円</div>
+        </div>
+        <div class="price-row-amount">8,000円</div>
+      </div>
+      <div class="price-row">
+        <div>
+          <div class="price-row-label">親子パスポート</div>
+          <div class="price-row-sub">家族何名でも：12か月<br>参加費8,000円＋SS年会費5,000円＋保険料1,000円</div>
+        </div>
+        <div class="price-row-amount">14,000円</div>
+      </div>
+    </div>
+
+    <div class="pricing-highlight">
+      🎉 無料お試し参加も2回まで受け付けております
+      <span class="pricing-highlight-sub">※2026年9月13日よりカウントスタート</span>
+    </div>
+
+    <!-- 本登録QRコード -->
+    <div class="reg-qr-box">
+      <p class="reg-qr-label">📋 EMB by SS 本登録はこちら</p>
+      <a href="https://www.canvaqr.com/RGAaqO95BO">
+        <img src="images/qr_registration.png" alt="EMB by SS 本登録QRコード" class="reg-qr-img">
+      </a>
     </div>
   </div>
 </section>
